@@ -1,34 +1,18 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_number - prints an integer
- * @n: param
+ * main - print prime
+ * Return: 0
  */
-void print_number(int n)
+int main(void)
 {
-	unsigned int i, j, count;
+	unsigned long int i = 3, n = 612852475143;
 
-	if (n < 0)
+	for (; i < 12057; i += 2)
 	{
-		_putchar(45);
-		i = n * -1;
+		while (n % i == 0 && n != i)
+			n /= i;
 	}
-	else
-	{
-		i = n;
-	}
-
-	j = i;
-	count = 1;
-
-	while (j > 9)
-	{
-		j /= 10;
-		count *= 10;
-	}
-
-	for (; count >= 1; count /= 10)
-	{
-		_putchar(((i / count) % 10) + 48);
-	}
+	printf("%lu\n", n);
+	return (0);
 }
