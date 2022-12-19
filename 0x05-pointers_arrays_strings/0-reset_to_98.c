@@ -6,6 +6,8 @@
  * @n: parameter to be provided
  * Return: Always 0 (Success)
  */
-void updateValue(int *ptr) {
-  *ptr = 98;
+
+void reset_to_98(int *n)
+{
+	*n = 98;
 }
