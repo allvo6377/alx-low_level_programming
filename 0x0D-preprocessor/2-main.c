@@ -4,6 +4,6 @@
  * Return: Always 0 (Success)
  */
 int main(void){
-	printf("File: %s\n", _LINE_);
+	printf("File: %s\n", __LINE__);
 return 0;
 }
