@@ -1,20 +1,29 @@
-#include "lists.h"
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
+#include "lists.h"
+
 /**
- * print_listint - prints all the elements of a linked list
- * @h: pointer to the 1st node of the linked list
- * Return: number of nodes
+ * print_list - check the code for Holberton School students.
+ * @h: name of the list
+ * Return: the number of nodes.
  */
-size_t print_listint(const listint_t *h)
+size_t print_list(const list_t *h)
 {
-	size_t nodenum = 0;
+	int count = 0;
 
 	while (h)
 	{
-		printf("%d\n", h->n);
-		nodenum++;
+		if (h->str == NULL)
+		{
+			printf("[0] (nil)\n");
+		}
+		else
+		{
+		printf("[%d] %s\n", h->len, h->str);
+		}
+		count++;
 		h = h->next;
 	}
-
-	return (nodenum);
+	return (count);
 }
